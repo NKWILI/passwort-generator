@@ -12,50 +12,18 @@
         <input type="text" id="password" placeholder="Password">
         <img src="images/copy.png" onclick="copyPassword()" >
     </div>
+    <!-- Rounded switch for including symbol  -->
+     <p>Include Symbols </p>
+    <input type="checkbox" id="switch" /><label for="switch"></label>
     <!-- Creating a button  to create password -->
     <button onclick="createPassword()"> <img src="images/generate.png" >Generate Password </button>
+
+    <div id="storedPassword">
+        
+    </div>
 </div>
 
-
-
-    <!-- JAVA SCRIPT  -->
-<script>
-    const passwordBox = document.getElementById("password");
-    const len = 12;
-
-    const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    const number = "0123456789";
-    const symbol= "!@#$%^&*()_+-={}[]:;";
-
-    const allChars = upperCase + lowerCase + number + symbol;
-
-    // the function to generate random password 
-    function createPassword(){
-        let password = "";
-        //contructing the password's first four character 
-        password += upperCase[Math.floor(Math.random() * upperCase.length)];
-        password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-        password += number[Math.floor(Math.random() * number.length)];
-        password += symbol[Math.floor(Math.random() * symbol.length)];
-
-        //constructing th rest of the characters
-        while( len > password.length){
-            password += allChars[Math.floor(Math.random() * allChars.length)]; }
-        passwordBox.value = password;
-    }
-
-    //The function for copying the password 
-function copyPassword(){
-     passwordBox.select();
-     document.execCommand("copy");
-
-    }
-
-
-
-
-</script>
+<script src="script.js"></script>
 </body>
 
 </html>
