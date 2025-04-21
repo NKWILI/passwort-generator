@@ -3,7 +3,7 @@
 A robust password generator built with **HTML5**, **CSS3**, and **Modern JavaScript**.
 
 ![Project Demo](./images/passwordgen.png)  
-*Live demo: [Try it here](https://your-vercel-app.vercel.app)*  
+*Live demo: [Try it here](https://nkwili.github.io/passwort-generator/)*  
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ## 🚀 Features
